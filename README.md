@@ -97,6 +97,7 @@ To compile the tests, use the following command that will create an executable n
 To run the tests, use:
 
 ```$ ./bin/tests```
+<\detials>
 
 <details>
 <summary>📂 <strong>starter-24c-student-record-reader-from-csv</strong></summary>
@@ -130,3 +131,4 @@ Luna Coco, 5678? 3.67
 The ```? ```following 5678 should be a comma. You can catch this formatting error by checking the value of the variable used to store the throwaway character after it is read.
 ```Oliver Boots! 1357, 3.5```
 The ```!``` after Boots should be a comma. You can catch this error by checking the last character of the string used to store last name during the formatted read.
+<\details>
