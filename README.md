@@ -97,3 +97,39 @@ To compile the tests, use the following command that will create an executable n
 To run the tests, use:
 
 ```$ ./bin/tests```
+</details>
+
+
+<details>
+<summary>📂 <strong>starter-24c-student-record-reader-from-csv</strong></summary>
+
+### Mission
+
+You are given a comma-separated value (CSV) file containing information about students. Each line of the file contains the first name, last name (followed by a comma), UIN (an unsigned integer), a comma, and GPA (a floating-point number). For example,
+```cpp
+Pickles Whiskers, 1234, 4.0
+Luna Coco, 5678, 3.67
+Oliver Boots, 1357, 3.5
+```
+You will implement the function ```Student ReadStudentRecFromStream(std::istream& is)``` in ```solution.cc``` that reads a student's record from the passed input stream (```std::istream```), parses the data, and returns a Student object (see its definition in student.hpp) with the parsed information.
+
+To call ```ReadStudentRecFromStream()``` you must first bind an input file to an std::ifstream and then pass that stream to your function. For example,
+```cpp
+std::ifstream ifs("./data/input.csv");
+Student student = ReadStudentRecFromStream(ifs);
+```
+If the contents of ```"./data/input.csv" ``` are the example above, ```ReadStudentRecFromStream()``` will return a Student object containing the information for ```Pickles Whiskers, 1234, 4.0```.
+
+Requirements:
+The first and last names appear in the first column of each line in the input file, separated by a space. Since formatted reads in C++ are delimited by whitespace, you must perform two separate reads to extract the first and last names. Additionally, after reading it, you'll need to remove the comma at the end of the last name and then concatenate the first and last names into a single string, ensuring a space separates them.
+After each formatted read, check if the read was successful by using ```is.fail()```. If this returns true, return an empty Student object (```return Student{};```). For example, ```is.fail()``` will return true if we attempt to read an int but the data type is ```char```:
+
+```cpp
+Oliver Boots, xyz, 3.5
+If the input stream contains invalid data (e.g., missing commas, improperly formatted data), the function should return an empty Student object (return Student{};). For example,
+Luna Coco, 5678? 3.67
+```
+The ```? ```following 5678 should be a comma. You can catch this formatting error by checking the value of the variable used to store the throwaway character after it is read.
+```Oliver Boots! 1357, 3.5```
+The ```!``` after Boots should be a comma. You can catch this error by checking the last character of the string used to store last name during the formatted read.
+</details>
