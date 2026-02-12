@@ -133,3 +133,53 @@ The ```? ```following 5678 should be a comma. You can catch this formatting erro
 ```Oliver Boots! 1357, 3.5```
 The ```!``` after Boots should be a comma. You can catch this error by checking the last character of the string used to store last name during the formatted read.
 </details>
+
+<details>
+<summary>📂 <strong>starter-24c-starter-24c-buggy-tic-tac-toe</strong></summary>
+
+### Mission  
+
+In this assignment, you will debug and fix a simple Tic-Tac-Toe game written in C++. The provided code contains intentional bugs that you need to identify and correct to make the game function properly. You are required to use the visual debugger to step through the code, inspect variables, and uncover the issues.
+
+Objectives
+Practice using the visual debugger to uncover and fix programming errors.
+Enhance problem-solving skills by identifying and correcting logical and syntax errors.
+Requirements
+Clone the starter code in VS Code and open the project in the CS 128 development environment:
+github.com/cs128-illinois/starter-24c-buggy-tic-tac-toe
+Familiarize yourself with the code:
+Read through the code to understand its structure and logic.
+Note the functions used for game mechanics, such as displaying the board, checking for a win, and handling player input.
+Are there any implementation details missing?
+Identify bugs using the visual debugger:
+Run the program and observe its behavior.
+Use breakpoints to pause execution at critical points in the code.
+Step through the code line by line to monitor variable values and program flow.
+Watch for discrepancies between expected and actual behavior.
+Fix the bugs:
+Modify the code to correct the identified issues. You must not change any function signatures nor their return types. You must not change any error messages printed to standard output/error.
+You will need to expand the code in certain cases to implement missing behavior.
+Accordingly, ensure that:
+Players can enter their moves correctly.
+The game accurately detects win conditions for both players.
+The game recognizes a draw when the board is full without a winner.
+Invalid inputs are handled gracefully with appropriate error messages.
+Test thoroughly:
+Play multiple games to test all possible scenarios, including wins, draws, and invalid inputs.
+Use the debugger to inspect the state of the game after each move.
+Document your findings and fixes:
+In comments within the code, explain the bugs you found and how you fixed them.
+Describe how the visual debugger helped you identify each issue.
+Constraints
+Do not change any provided function signatures and return types.
+The program should prompt players to enter their moves in the format: ```row column```.
+Rows and columns are zero-indexed (from ```0``` to ```2```).
+Game Logic:
+Each player takes their turn; alternate turns between Player X and Player O.
+Correctly implement win condition checks for rows, columns, and diagonals.
+Detect a draw when all cells are occupied without a winner.
+Your solution must compile with ```clang++``` using the ```c++20``` standard, without errors when using the flags: ```-Wall -Wextra -Werror -pedantic -Wunused-variable -Wuninitialized```.
+You may only include the following headers in your solution:
+```"functions.hpp" <iostream> <limits> <vector>```
+Good luck, and happy debugging!
+</details>
