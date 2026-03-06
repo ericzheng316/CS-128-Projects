@@ -511,4 +511,47 @@ No match happens when none of the people matches the DNA or when more than one p
 
 </details>
 
+<details>
+<summary>📂 <strong>starter-25a-io-shpping-list</strong></summary>
+
+### Mission
+
+You are developing a program to simplify reading and managing grocery shopping data. Your goal is to parse a text file containing a list of items, where each line has the format:
+
+```item_name quantity price```
+For example:
+```cpp
+Apples 10 5.99
+Tomatoes 5 3.99
+```
+Each entry corresponds to the following ```Item ```struct:
+```cpp
+struct Item {
+  std::string item_name;
+  int quantity;
+  double price;
+};
+```
+#### Implementation Details:
+
+Implement a function named ```LoadShoppingItemsFromFile``` that takes a filename as input, opens the file, and performs formatted reads of each shopping list item's name, quantity, and price. Each set of values should be stored in an ```Item``` object, which is then added to an ```std::vector<Item>``` and returned to the caller.
+
+##### File Format
+
+Each line contains an item name (string), a quantity (integer), and a price (double).
+Example line: ```Apples 10 5.99```
+##### Error Handling
+
+If the file cannot be opened, throw an appropriate exception.
+If the file is empty, throw an appropriate exception.
+If a formatted read fails—for example, if ```Quantity``` is not an integer or ```Price``` is not a double—throw an exception.
+Given an ```std::ifstream ifs```, ```ifs.fail()``` returns true if a read operation on ifs did not succeed—for example, if the data was in the wrong format. This allows you to verify whether the last operation read valid data and if the stream remains usable for further reads. In this activity, check ```fail()``` on your ```std::ifstream``` immediately after each read. If it returns ```true```, you should ```throw``` an exception and expect the caller to handle it appropriately.
+##### Output
+
+Return an ```std::vector<Item>``` containing all successfully parsed items only if the entire file is read correctly and no formatted read errors occur.
+### Getting started
+
+Since our interactive playground does not support input/output, you must clone the starter code repository, work locally on this assignment in our development container, and then upload the requested files to this webpage for submission.
+
+__address: https://github.com/cs128-illinois/starter-25a-io-shopping-list__
 </details>
