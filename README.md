@@ -555,3 +555,10 @@ Since our interactive playground does not support input/output, you must clone t
 
 __address: https://github.com/cs128-illinois/starter-25a-io-shopping-list__
 </details>
+
+<details>
+<summary>📂 <strong>recitation-log-parser</strong></summary>
+
+https://github.com/ericzheng316/CS-128-Projects/blob/main/recitation-log-parser/README.md
+
+</details>
